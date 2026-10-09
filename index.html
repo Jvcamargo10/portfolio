@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* Layout: uma coluna estreita, cabeçalho curto e um único projeto em destaque */
+/* Layout: uma coluna estreita, cabeçalho curto e duas grades de projetos (sites e sistemas) */
 :root{
   --bg:#F7F7F4; --surface:#FFFFFF; --fg:#16181D; --muted:#5A6070; --line:#E2E2DC; --accent:#2141C8; --accent-soft:#E8ECFB;
   --display:'Familjen Grotesk', 'Helvetica Neue', Arial, sans-serif;
@@ -45,6 +45,8 @@ main{display:flex;flex-direction:column;gap:16px}
 .card.sub .cta{margin-top:auto}
 .card.sub .cta a{background:transparent;color:var(--accent);padding:0;min-height:32px}
 .card.sub .cta a:hover{background:transparent;text-decoration:underline}
+.section-title{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:16px 0 0}
+.section-title:first-child{margin-top:0}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 footer{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--muted);font-size:15px}
 </style>
@@ -57,43 +59,94 @@ footer{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-wrap:
     <h1>João Camargo</h1>
     <p class="lead">Mais de 6 anos criando sites, sistemas internos e automações. Hoje lidero um time de 3 pessoas na Prefeitura de Osasco, mantendo 5 sistemas em produção.</p>
     <div class="links">
-      <a href="https://github.com/Jvcamargo10">GitHub</a>
-      <a href="https://www.linkedin.com/in/joao-vitor-gomes-camargo">LinkedIn</a>
+      <a href="https://github.com/Jvcamargo10" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/joao-vitor-gomes-camargo" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </header>
 
   <main>
-    <article class="card">
-      <div class="meta"><span class="new">Novo</span><span>AR2M Cosméticos</span><span>2026</span></div>
-      <h2>Novo site para os 20 anos da AR2M</h2>
-      <p>Protótipo da nova home de uma distribuidora de cosméticos capilares profissionais. Formulário de captação de leads para o televendas, conteúdo por perfil (salão, cabeleireiro, loja, e-commerce) e assistente virtual.</p>
-      <div class="tags"><span>Design</span><span>Captação de leads</span><span>Chatbot</span></div>
-      <div class="cta"><a href="ar2m/">Ver protótipo →</a></div>
-    </article>
-
+    <h3 class="section-title">Sites</h3>
     <div class="grid">
+      <article class="card sub">
+        <div class="meta"><span>AR2M Cosméticos</span><span>Protótipo · 2026</span></div>
+        <h2>AR2M 20 Anos</h2>
+        <p>Nova home de uma distribuidora de cosméticos capilares profissionais, com captação de leads para o televendas, conteúdo por perfil e assistente virtual.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="cta"><a href="ar2m/" target="_blank" rel="noopener">Ver site →</a></div>
+      </article>
       <article class="card sub">
         <div class="meta"><span>JHC Advocacia</span><span>Site institucional</span></div>
         <h2>JHC ADV Agro</h2>
         <p>Site de um escritório de advocacia especializado em agronegócio, direito empresarial e tributário, com áreas de atuação, equipe, notícias e área do cliente.</p>
         <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-        <div class="cta"><a href="https://jvcamargo10.github.io/jhcadvocacia.github.io/">Ver site →</a></div>
+        <div class="cta"><a href="https://jvcamargo10.github.io/jhcadvocacia.github.io/" target="_blank" rel="noopener">Ver site →</a></div>
       </article>
-
       <article class="card sub">
         <div class="meta"><span>ConnectWork</span><span>Plataforma</span></div>
         <h2>ConnectWork</h2>
         <p>Plataforma que conecta empresas a profissionais para eventos e serviços, com áreas separadas para quem contrata e para quem busca trabalho.</p>
         <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-        <div class="cta"><a href="https://jvcamargo10.github.io/connectwork/">Ver site →</a></div>
+        <div class="cta"><a href="https://jvcamargo10.github.io/connectwork/" target="_blank" rel="noopener">Ver site →</a></div>
       </article>
-
       <article class="card sub">
         <div class="meta"><span>Projetch Inovações</span><span>Site institucional</span></div>
         <h2>Projetch</h2>
         <p>Site de uma agência de tecnologia com apresentação, serviços, projetos e contato.</p>
         <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-        <div class="cta"><a href="https://jvcamargo10.github.io/projetch-site/">Ver site →</a></div>
+        <div class="cta"><a href="https://jvcamargo10.github.io/projetch-site/" target="_blank" rel="noopener">Ver site →</a></div>
+      </article>
+    </div>
+
+    <h3 class="section-title">Sistemas e APIs</h3>
+    <div class="grid">
+      <article class="card sub">
+        <div class="meta"><span>Prefeitura de Osasco</span><span>Sistema em produção</span></div>
+        <h2>Central de Contratos</h2>
+        <p>Lê contratos, aditivos e apostilamentos da pasta de rede com OCR, propõe os dados para revisão humana e alerta vencimentos por e-mail. Login via Microsoft Entra ID e 405 testes automatizados. Cópia de portfólio com dados fictícios.</p>
+        <div class="tags"><span>Node.js</span><span>Express</span><span>OCR</span><span>Entra ID</span></div>
+        <div class="cta"><a href="https://jvcamargo10.github.io/centraldecontratos/" target="_blank" rel="noopener">Ver demo →</a></div>
+      </article>
+      <article class="card sub">
+        <div class="meta"><span>Gestão pública</span><span>SPA · Demo</span></div>
+        <h2>ERP Municipal</h2>
+        <p>Sistema de gestão municipal modular, com financeiro, RH, protocolo digital, tributário, controle de acesso por perfis, auditoria e portal do cidadão.</p>
+        <div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+        <div class="cta"><a href="https://jvcamargo10.github.io/erp/" target="_blank" rel="noopener">Ver demo →</a></div>
+      </article>
+      <article class="card sub">
+        <div class="meta"><span>Contratos administrativos</span><span>API + front-end</span></div>
+        <h2>ContratosApi</h2>
+        <p>API REST em Clean Architecture com 4 camadas, autenticação JWT e hashing PBKDF2 implementados do zero, com front-end em Angular.</p>
+        <div class="tags"><span>C#</span><span>.NET 8</span><span>Angular</span></div>
+        <div class="cta"><a href="https://jvcamargo10.github.io/ContratosApi/" target="_blank" rel="noopener">Ver demo →</a></div>
+      </article>
+      <article class="card sub">
+        <div class="meta"><span>Quadro Kanban</span><span>API + front-end</span></div>
+        <h2>GestaoTarefasApi</h2>
+        <p>Quadro de tarefas com colunas de status, autenticação JWT, SQLite e arrastar e soltar com alternativa acessível por teclado.</p>
+        <div class="tags"><span>Node.js</span><span>TypeScript</span><span>React</span></div>
+        <div class="cta"><a href="https://jvcamargo10.github.io/GestaoTarefasApi/" target="_blank" rel="noopener">Ver demo →</a></div>
+      </article>
+      <article class="card sub">
+        <div class="meta"><span>Validação de dados</span><span>API REST</span></div>
+        <h2>Validador PHP</h2>
+        <p>Valida e padroniza CPF, CNPJ, e-mail, data e telefone, com as mesmas regras e respostas da versão em Java.</p>
+        <div class="tags"><span>PHP 8.4</span></div>
+        <div class="cta"><a href="https://jvcamargo10.github.io/ValidadorPHP/" target="_blank" rel="noopener">Ver painel →</a></div>
+      </article>
+      <article class="card sub">
+        <div class="meta"><span>Validação de dados</span><span>API REST</span></div>
+        <h2>Validador Java</h2>
+        <p>Versão em Java puro do validador, seguindo o mesmo contrato de regras da versão em PHP, com painel em React.</p>
+        <div class="tags"><span>Java 21</span><span>React</span><span>TypeScript</span></div>
+        <div class="cta"><a href="https://jvcamargo10.github.io/ValidadorJava/" target="_blank" rel="noopener">Ver painel →</a></div>
+      </article>
+      <article class="card sub">
+        <div class="meta"><span>Automação</span><span>Python</span></div>
+        <h2>Automação Python</h2>
+        <p>Processa imagens em lote (miniaturas e marca d'água) e gera relatórios em Excel e PDF a partir de dados estruturados.</p>
+        <div class="tags"><span>Python</span><span>Pillow</span><span>openpyxl</span><span>Flask</span></div>
+        <div class="cta"><a href="https://jvcamargo10.github.io/AutomacaoPython/" target="_blank" rel="noopener">Ver painel →</a></div>
       </article>
     </div>
   </main>
