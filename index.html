@@ -48,6 +48,12 @@ main{display:flex;flex-direction:column;gap:16px}
 .section-title{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:16px 0 0}
 .section-title:first-child{margin-top:0}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skills{display:flex;flex-direction:column;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px 24px}
+.skills div{display:grid;grid-template-columns:180px 1fr;gap:6px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.skills div:last-child{border-bottom:0}
+.skills dt{font-family:var(--display);font-weight:700}
+.skills dd{margin:0}
+@media (max-width:600px){.skills div{grid-template-columns:1fr}}
 footer{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--muted);font-size:15px}
 </style>
 </head>
@@ -57,7 +63,7 @@ footer{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-wrap:
   <header>
     <div class="eyebrow">Desenvolvedor full stack · Osasco, SP</div>
     <h1>João Camargo</h1>
-    <p class="lead">Mais de 6 anos criando sites, sistemas internos e automações. Hoje lidero um time de 3 pessoas na Prefeitura de Osasco, mantendo 5 sistemas em produção.</p>
+    <p class="lead">Desenvolvedor há 4 anos, criando sistemas internos, sites e automações. Hoje lidero um time de 3 pessoas na Prefeitura de Osasco, mantendo 5 sistemas em produção.</p>
     <div class="links">
       <a href="https://github.com/Jvcamargo10" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/joao-vitor-gomes-camargo" target="_blank" rel="noopener">LinkedIn</a>
@@ -65,6 +71,16 @@ footer{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-wrap:
   </header>
 
   <main>
+    <h3 class="section-title">Habilidades</h3>
+    <dl class="skills">
+      <div><dt>Linguagens</dt><dd class="tags"><span>C#</span><span>Java</span><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>PHP</span><span>SQL</span><span>HTML</span><span>CSS</span></dd></div>
+      <div><dt>Back-end</dt><dd class="tags"><span>.NET</span><span>ASP.NET Core</span><span>Entity Framework Core</span><span>Azure Functions</span><span>Spring Boot</span><span>FastAPI</span><span>Node.js</span><span>Express</span><span>APIs REST</span><span>GraphQL</span><span>JWT</span><span>Clean Architecture</span><span>Microsserviços</span><span>Microsoft Entra ID</span><span>Microsoft Graph</span></dd></div>
+      <div><dt>Front-end</dt><dd class="tags"><span>Angular 15+</span><span>RxJS</span><span>NgRx</span><span>React</span><span>Next.js</span><span>Storybook</span><span>Tailwind CSS</span><span>Bootstrap</span></dd></div>
+      <div><dt>Dados e mensageria</dt><dd class="tags"><span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Redis</span><span>Firebase</span><span>Kafka</span><span>RabbitMQ</span><span>Azure Service Bus</span><span>Amazon SQS</span></dd></div>
+      <div><dt>Cloud e DevOps</dt><dd class="tags"><span>Azure</span><span>AWS</span><span>GCP</span><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>Terraform</span><span>Bicep</span><span>GitHub Actions</span><span>Azure DevOps</span><span>Git</span><span>Linux</span></dd></div>
+      <div><dt>Qualidade e IA</dt><dd class="tags"><span>OpenTelemetry</span><span>Prometheus</span><span>Grafana</span><span>xUnit</span><span>MSTest</span><span>JUnit</span><span>Testcontainers</span><span>pytest</span><span>Jest</span><span>Scrum</span><span>Kanban</span><span>LGPD</span><span>Azure OpenAI</span><span>RAG</span><span>OCR</span></dd></div>
+    </dl>
+
     <h3 class="section-title">Projetos full stack</h3>
     <div class="grid">
       <article class="card sub">
